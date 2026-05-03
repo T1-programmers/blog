@@ -51,6 +51,7 @@
 | 30 | Sales |
 
 ### 1. Inner Join
+#### 설명 : 왼쪽과 오른쪽 테이블 양쪽에 다 존재하는데 결과만 출력됨.
 #### 문법 : SELECT [column1 명],[column2 명],[column3 명],... FROM [table1 명] INNER JOIN [table2 명] ON [table1의 연결고리 컬럼명] = [table2의 연결고리 컬럼명];
 #### 예시 : SELECT E.NAME, D.DEPT_NAME FROM EMPLOYEE E INNER JOIN DEPARTMENT D ON E.DEPT_ID = D.DEPT_ID;
 
@@ -60,6 +61,7 @@
 | Lee | HR |
 
 ### 2. Left Join
+#### 설명 : 왼쪽 테이블 기준으로 결과가 출력됨.
 #### 문법 : SELECT [column1 명],[column2 명],[column3 명],... FROM [table1 명] LEFT JOIN [table2 명] ON [table1의 연결고리 컬럼명] = [table2의 연결고리 컬럼명];
 #### 예시 : SELECT E.NAME, D.DEPT_NAME FROM EMPLOYEE E LEFT JOIN DEPARTMENT D ON E.DEPT_ID = D.DEPT_ID;
 
@@ -70,6 +72,7 @@
 | Park | **NULL** |
 
 ### 3. Right Join
+#### 설명 : 오른쪽 테이블 기준으로 결과가 출력됨.
 #### 문법 : SELECT [column1 명],[column2 명],[column3 명],... FROM [table1 명] RIGHT JOIN [table2 명] ON [table1의 연결고리 컬럼명] = [table2의 연결고리 컬럼명];
 #### 예시 : SELECT E.NAME, D.DEPT_NAME FROM EMPLOYEE E RIGHT JOIN DEPARTMENT D ON E.DEPT_ID = D.DEPT_ID;
 
@@ -81,3 +84,6 @@
 
 ## SubQuery
 ### 1. SubQuery
+#### 설명 : 쿼리문 안에 쿼리문을 작성하여 해당 쿼리문 결과로 만들어진 임시 테이블을 활용.
+#### 문법 : SELECT [column1 명],[column2 명],[column3 명],... FROM [쿼리문] AS [쿼리문 별칭];
+#### 예시 : SELECT name FROM (SELECT * FROM employee) AS emp;
